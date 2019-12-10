@@ -19,6 +19,7 @@ fi
 
 # Download WordPress.
 
+chmod -R 777 /opt
 mkdir -p /opt/app-root/downloads
 
 curl -Ls http://wordpress.org/wordpress-${WORDPRESS_INSTALL_VERSION}.tar.gz > /opt/app-root/downloads/wordpress.tar.gz
