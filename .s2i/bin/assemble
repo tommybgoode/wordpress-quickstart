@@ -19,8 +19,8 @@ fi
 
 # Download WordPress.
 
-/bin/bash -c 'chmod -R 777 /opt'
-mkdir -p /opt/app-root/downloads
+sudo chmod -R 777 /opt'
+sudo mkdir -p /opt/app-root/downloads
 
 curl -Ls http://wordpress.org/wordpress-${WORDPRESS_INSTALL_VERSION}.tar.gz > /opt/app-root/downloads/wordpress.tar.gz
 echo ${WORDPRESS_INSTALL_VERSION} > /opt/app-root/downloads/wordpress-version.txt
@@ -41,13 +41,13 @@ fi
 # location and have the custom image use those by dropping in an image
 # metadata file which overrides the labels of the base image.
 
-mkdir -p /opt/app-root/s2i
+sudo mkdir -p /opt/app-root/s2i
 
 mv /tmp/src/builder/assemble /opt/app-root/s2i/assemble
 mv /tmp/src/builder/run /opt/app-root/s2i/run
 mv /tmp/src/builder/save-artifacts /opt/app-root/s2i/save-artifacts
 
-mkdir -p /tmp/.s2i
+sudo mkdir -p /tmp/.s2i
 
 mv /tmp/src/builder/image_metadata.json /tmp/.s2i/image_metadata.json
 
