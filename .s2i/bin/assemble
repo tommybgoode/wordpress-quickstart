@@ -19,6 +19,7 @@ fi
 
 # Download WordPress.
 
+USER root
 chmod -R 777 /opt
 mkdir -p /opt/app-root/downloads
 
