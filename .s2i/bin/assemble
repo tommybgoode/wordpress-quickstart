@@ -19,7 +19,7 @@ fi
 
 # Download WordPress.
 
-sudo chmod -R 777 /opt'
+sudo chmod -R 777 /opt
 sudo mkdir -p /opt/app-root/downloads
 
 curl -Ls http://wordpress.org/wordpress-${WORDPRESS_INSTALL_VERSION}.tar.gz > /opt/app-root/downloads/wordpress.tar.gz
